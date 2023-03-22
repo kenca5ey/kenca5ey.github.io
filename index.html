@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Main Page</title>
+    <meta name="description" content="Main" />
+    <meta name="keywords" content="main page" />
+  </head>
+  <body>
+    <ul>
+      <li>Source 1 - <a onclick="openRequiredWindow(1)" href="javascript:void(0);">Visit Popup 1!</a></li>
+      <li>Source 2 - <a onclick="openRequiredWindow(2)" href="javascript:void(0);">Visit Popup 2!</a></li>
+      <li>Source 3 - <a onclick="openRequiredWindow(3)" href="javascript:void(0);">Visit Popup 3!</a></li>
+    </ul>
+  </body>
+  <script>
+    function openRequiredWindow(index) {
+      console.log("Index:", index);
+      //   window.open("http://google.com", "x", "height=600,width=600,screenX=200,screenY=100,resizable=yes,scrollbars=yes,toolbar=no,menubar=no,location=no,directories=no,status=no");
+      window.open("/secondarypage" + index + ".html", "x", "popup=yes,screenX=200,screenY=100,height=600,width=600,location=no");
+      //   window.open("https://javascript.info");
+    }
+  </script>
+</html>
